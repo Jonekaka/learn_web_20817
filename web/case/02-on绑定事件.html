@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function () {
+        // 用on给按钮添加click事件
+        $("#btn").on("click",function () {
+            alert("绑定了点击事件");
+        });
+// 使用off取消绑定
+        $("#btn2").click(function () {
+            // 注意解绑的id
+            $("#btn").off("click");
+            // $("#btn").off();解除全部绑定
+        });
+        });
+    </script>
+</head>
+<body>
+<input id="btn" type="button" value="使用on绑定点击事件">
+<input id="btn2" type="button" value="使用off解绑点击事件">
+</body>
+</html>

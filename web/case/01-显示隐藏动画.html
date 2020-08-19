@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<script>
+    // 为什么不能加载完成后使用？，索引无法定位到按钮功能函数
+    // 如果先看视频，再做，做不出来又要回去看，浪费时间，细节不到位，不清楚
+    // 如果先做，又不懂道理，只会照葫芦画瓢而已，没有印象，都不可取
+    // $(function () {
+        function  hideFn() {
+   /*         $("#showDiv").hide("slow","swing",function () {
+                alert("隐藏");
+            });*/
+/*            // 默认方式
+            $("#showDiv").hide(5000,"swing");*/
+/*            // 滑动方式
+            $("#showDiv").slideUp("slow");*/
+//          淡入淡出方式
+            $("#showDiv").fadeOut("slow");
+        };
+        function  showFn() {
+/*                     $("#showDiv").show("slow","swing",function () {
+             alert("展示");
+         });*/
+/*                        // 默认方式
+                        $("#showDiv").show(5000,"swing");*/
+/*                        // 滑动方式
+                        $("#showDiv").slideDown("slow");*/
+//          淡入淡出方式
+            $("#showDiv").fadeIn("slow");
+        }
+        function  toggleFn() {
+/*            // 默认方式
+            $("#showDiv").toggle("slow");*/
+/*                // 滑动方式
+            $("#showDiv").slideToggle("slow");*/
+            // 淡入淡出方式
+            $("#showDiv").fadeToggle("slow");
+
+        }
+
+    // });
+</script>
+</head>
+<body>
+<input type="button" value="点击按钮隐藏div" onclick="hideFn()">
+<input type="button" value="点击按钮显示div" onclick="showFn()">
+<input type="button" value="点击按钮切换div显示和隐藏" onclick="toggleFn()">
+
+<div id="showDiv" style="width:300px;height:300px;background:pink">
+    div显示和隐藏
+</div>
+</body>
+</html>
